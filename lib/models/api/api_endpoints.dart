@@ -1,6 +1,6 @@
 class ApiEndPoints {
   static final String baseUrl = 'https://su-socialmedia.onrender.com/api/v1.0/';
-  static _AuthEndPoints _authEndPoints = _AuthEndPoints();
+  static _AuthEndPoints authEndPoints = _AuthEndPoints();
 }
 
 class _AuthEndPoints {
