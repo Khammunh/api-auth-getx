@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../widgets/input_fields.dart';
+import '../widgets/submit_button.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -122,7 +123,20 @@ class _AuthScreenState extends State<AuthScreen> {
 
   Widget loginWidget() {
     return Column(
-      children: [],
+      children: [
+        SizedBox(height: 20),
+        InputTextFieldWidget(
+          loginController.emailController,
+          'email address',
+        ),
+        SizedBox(height: 20),
+        InputTextFieldWidget(
+          loginController.passwordController,
+          'password',
+        ),
+             SizedBox(height: 20),
+             SubmitButton(onPressed: () => loginController.loginWithEmail(),title: "Login")
+      ],
     );
   }
 }
